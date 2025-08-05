@@ -1,0 +1,39 @@
+.admin-dashboard {
+  padding: 2rem;
+  text-align: center;
+}
+
+.leave-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leave-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 400px;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.action-buttons button {
+  margin: 0.5rem;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-buttons button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-buttons button:last-child {
+  background-color: #dc3545;
+  color: white;
+}

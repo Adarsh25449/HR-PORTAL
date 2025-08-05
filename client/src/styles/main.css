@@ -1,0 +1,87 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page Wrapper */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f4f7fa;
+  padding: 2rem;
+}
+
+/* Form Container */
+.form-box {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Input Field */
+.form-box input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button */
+.form-box button {
+  padding: 0.6rem 1.5rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+.form-box button:hover {
+  background-color: #0056b3;
+}
+
+/* Link */
+.form-box a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-box a:hover {
+  text-decoration: underline;
+}
+
+/* Heading */
+.form-box h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Dashboard Styles */
+.dashboard-links {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.dashboard-links a {
+  padding: 0.7rem 1rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
