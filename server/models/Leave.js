@@ -1,11 +1,11 @@
-// server/models/Leave.js
+
 const mongoose = require("mongoose");
 
 const leaveSchema = new mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User", // Connects to the User model
+      ref: "User", 
       required: true,
     },
     fromDate: {

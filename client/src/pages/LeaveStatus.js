@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './LeaveStatus.css'; // Optional: style this file for professional look
+import './LeaveStatus.css'; 
 
 const LeaveStatus = () => {
   const [leaves, setLeaves] = useState([]);

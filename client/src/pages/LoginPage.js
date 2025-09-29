@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
-import '../styles/main.css'; // ✅ Adjust path if needed
+import '../styles/main.css'; 
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -25,16 +25,16 @@ const LoginPage = () => {
 
       const user = res.data;
 
-      // ✅ Save user to local storage
+      
       localStorage.setItem('user', JSON.stringify(user));
 
       alert('✅ Login successful!');
 
-      // ✅ Redirect based on user role
+      
       if (user.role === 'admin') {
-        navigate('/admin'); // Admin Dashboard
+        navigate('/admin'); 
       } else {
-        navigate('/dashboard'); // Employee Dashboard
+        navigate('/dashboard'); 
       }
 
     } catch (error) {

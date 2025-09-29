@@ -1,14 +1,14 @@
-// server/models/Attendance.js
+
 const mongoose = require("mongoose");
 
 const attendanceSchema = new mongoose.Schema({
   employeeId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User", // Reference to User model
+    ref: "User", 
     required: true,
   },
   date: {
-    type: String, // Using string format (e.g., "2025-07-27") for consistency in queries
+    type: String, 
     required: true,
   },
   checkInTime: {
@@ -17,7 +17,7 @@ const attendanceSchema = new mongoose.Schema({
   },
   checkOutTime: {
     type: String,
-    default: "", // Optional; can be updated later
+    default: "", 
   },
   status: {
     type: String,

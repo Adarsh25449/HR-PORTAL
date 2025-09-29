@@ -1,20 +1,20 @@
-// server/routes/leaveRoutes.js
+
 const express = require("express");
 const Leave = require("../models/Leave");
 const router = express.Router();
 
-// ✅ POST: Apply for leave
+
 router.post("/apply", async (req, res) => {
   try {
     const { employeeId, fromDate, toDate, reason } = req.body;
 
-    // ✅ Validate fields
+    
     if (!employeeId || !fromDate || !toDate || !reason) {
       return res.status(400).json({ error: "All fields are required." });
     }
 
     const leave = new Leave({
-      user: employeeId,          // ⬅ matches the schema field
+      user: employeeId,         
       fromDate,
       toDate,
       reason,
@@ -29,11 +29,11 @@ router.post("/apply", async (req, res) => {
   }
 });
 
-// ✅ GET: All leave requests (admin)
+
 router.get("/all", async (req, res) => {
   try {
     const leaves = await Leave.find()
-      .populate("user", "name email")  // ⬅ updated from employeeId to user
+      .populate("user", "name email")  
       .sort({ createdAt: -1 });
 
     res.json(leaves);
@@ -43,7 +43,7 @@ router.get("/all", async (req, res) => {
   }
 });
 
-// ✅ POST: Update leave status
+
 router.post("/update-status", async (req, res) => {
   try {
     const { id, status } = req.body;
@@ -67,10 +67,10 @@ router.post("/update-status", async (req, res) => {
   }
 });
 
-// ✅ GET: Leaves of logged-in user
+
 router.get("/mine/:userId", async (req, res) => {
   try {
-    const leaves = await Leave.find({ user: req.params.userId })  // ⬅ use `user`
+    const leaves = await Leave.find({ user: req.params.userId })  
       .sort({ createdAt: -1 });
 
     res.json(leaves);

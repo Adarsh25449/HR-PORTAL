@@ -1,9 +1,9 @@
-// server/routes/authRoutes.js
+
 const express = require("express");
 const User = require("../models/User");
 const router = express.Router();
 
-// ✅ Signup route
+
 router.post("/signup", async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -21,7 +21,7 @@ router.post("/signup", async (req, res) => {
       return res.status(400).json({ error: "Email already registered" });
     }
 
-    // ✅ New user defaults to "employee" role
+    
     const newUser = new User({
       name: trimmedName,
       email: normalizedEmail,
@@ -47,7 +47,7 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-// ✅ Login route
+
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -65,12 +65,12 @@ router.post("/login", async (req, res) => {
       return res.status(401).json({ error: "Invalid email or password" });
     }
 
-    // ✅ Include role in response so frontend can route properly
+    
     res.status(200).json({
       _id: user._id,
       name: user.name,
       email: user.email,
-      role: user.role, // ✅ this line enables admin redirection
+      role: user.role, 
     });
   } catch (error) {
     console.error("❌ Login error:", error);

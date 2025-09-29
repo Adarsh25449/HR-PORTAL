@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './LeaveForm.css'; // Your custom styling
+import './LeaveForm.css'; 
 
 const LeaveForm = () => {
   const [fromDate, setFromDate] = useState('');

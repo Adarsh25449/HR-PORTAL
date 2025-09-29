@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../styles/main.css'; // ✅ Ensure this path is correct
+import '../styles/main.css'; 
 
 const Dashboard = () => {
   const navigate = useNavigate();

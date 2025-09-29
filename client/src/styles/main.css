@@ -1,4 +1,4 @@
-/* Global Reset */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +6,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Page Wrapper */
+
 .page-container {
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
   padding: 2rem;
 }
 
-/* Form Container */
+
 .form-box {
   background: white;
   padding: 2rem 2.5rem;
@@ -28,7 +28,7 @@
   text-align: center;
 }
 
-/* Input Field */
+
 .form-box input {
   width: 100%;
   padding: 0.6rem;
@@ -37,7 +37,7 @@
   border-radius: 5px;
 }
 
-/* Button */
+
 .form-box button {
   padding: 0.6rem 1.5rem;
   background-color: #007bff;
@@ -53,7 +53,7 @@
   background-color: #0056b3;
 }
 
-/* Link */
+
 .form-box a {
   color: #007bff;
   text-decoration: none;
@@ -63,12 +63,12 @@
   text-decoration: underline;
 }
 
-/* Heading */
+
 .form-box h2 {
   margin-bottom: 1.5rem;
 }
 
-/* Dashboard Styles */
+
 .dashboard-links {
   display: flex;
   gap: 1rem;

@@ -2,7 +2,7 @@ const express = require("express");
 const Leave = require("../models/Leave");
 const router = express.Router();
 
-// View all leave applications
+
 router.get("/leaves", async (req, res) => {
   try {
     const leaves = await Leave.find().populate('userId', 'name email');
@@ -12,7 +12,7 @@ router.get("/leaves", async (req, res) => {
   }
 });
 
-// Approve or Reject leave
+
 router.post("/leave/:id/decision", async (req, res) => {
   const { status, adminResponse } = req.body;
   try {
