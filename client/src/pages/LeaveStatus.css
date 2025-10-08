@@ -1,43 +1,119 @@
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef2f6;
+  margin: 0;
+  padding: 0;
+}
+
+
 .leave-status-container {
   padding: 2rem;
   text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
+
+.leave-status-container h2 {
+  font-size: 2rem;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.leave-status-container h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
 
 .leave-status-table {
   margin: auto;
-  width: 80%;
+  width: 90%;
   border-collapse: collapse;
-  font-size: 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.leave-status-table th,
-.leave-status-table td {
-  padding: 0.8rem 1.2rem;
-  border: 1px solid #ccc;
-}
 
 .leave-status-table th {
   background-color: #007bff;
   color: white;
+  padding: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
 }
+
+
+.leave-status-table td {
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+
+
+.leave-status-table tr:hover {
+  background-color: #f1f6ff;
+  transition: 0.2s ease;
+}
+
 
 .status {
-  font-weight: bold;
-  padding: 0.3rem 0.6rem;
-  border-radius: 5px;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: inline-block;
+  text-transform: capitalize;
 }
 
+
 .status.pending {
-  background-color: #ffc107;
-  color: black;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
 }
 
 .status.approved {
-  background-color: #28a745;
-  color: white;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
 }
 
 .status.rejected {
-  background-color: #dc3545;
-  color: white;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+  .leave-status-table {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .leave-status-table th, 
+  .leave-status-table td {
+    padding: 0.6rem;
+  }
+}
+
